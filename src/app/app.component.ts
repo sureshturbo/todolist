@@ -6,14 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
+  
  
   title = 'my task';      /*data binding*/
   taskList: string[] =[]
   
   ngOnInit(): void {
-    if(localStorage.getItem('my_tasks'))
-    {
-      this.taskList= JSON.parse (localStorage.getItem('my_task'))
+    if (localStorage.getItem('my_task')) {
+      
+        this.taskList = JSON.parse(localStorage.getItem('my_task'))
+
+
     }
   }
 }
+

@@ -14,6 +14,6 @@ export class TaskListComponent implements OnInit {
   
   removetask(index : number){
     this.tasks.splice(index ,1)
-
+    localStorage.setItem('my_task',JSON.stringify(this.tasks))
   }
 }

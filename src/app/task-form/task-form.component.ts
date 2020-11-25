@@ -15,6 +15,7 @@ export class TaskFormComponent implements OnInit {
   addtodo(){
      this.taskList.unshift(this.newtask);
       localStorage.setItem('my_task',JSON.stringify(this.taskList))
+      this.newtask='';
   }
  
 }
